@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+          <a class="brand" href="#">Dr.With</a>
+          <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#">SMS 보내기</a></li>
+            <li><a href="#">주소록관리</a></li>
+            <li><a href="#">의사/병원 정보수정</a></li>
+            <li><a href="#">문자충전</a></li>
+            <li><a href="#">전송내역</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+       
+    <section>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span9">  
+            <ul class="nav nav-tabs" id="myTab">
+              <li class="active"><a href="#keyword" data-toggle="tab">의학용어</a></li>
+              <li><a href="#comment" data-toggle="tab">의사코멘트</a></li>
+            </ul>
+             
+            <div class="tab-content">
+              <div class="tab-pane fade active in" id="keyword">
+                <form class="form-search">
+                  <div class="input-append">
+                    <!-- typeahead source 추후 db 내용으로 수정. 함수 이용할 듯 -->
+                    <input type="text" class="search-query" placeholder="이름 또는 코드" data-provide="typeahead" data-source="aasdgsbewfadh" data-items="5">
+                    <button type="submit" class="btn btn-primary">검 색</button>
+                  </div>
+                </form>          
+                <!-- class srp, w_list 아직 css에 속성없는 상태 -->
+                <article>
+                  <!-- span9를 다시 12로 보고 9와 3으로 나눔. span은 상대적 비율인셈 -->
+                  <div class="span9">
+                    <div class="srp">
+                                    DB에서 해당 subject의 내용들 가져오기. 병명/약명의 db 내용이 모두 다르게 분류되어 있어 contents 단순 호출이 어려움 고민중.db에서 contents라는 key값에 다 때려넣어두면 될까? 검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과검색결과
+                    </div>
+                  </div>
+                  <div class="span3">
+                    <div class="w_list">
+                      <ul class="nav nav-tabs nav-stacked">
+                        <!-- x 표시 아이콘 클릭과 단어클릭 부분을 분리할 것인가? -->
+                        <li><a class="btn" href="#"><span class="label label-info pull-left">진단명</span> 단어카드2<i class="icon-remove pull-right"></i></a></li>
+                        <li><a class="btn" href="#"><span class="label label-important pull-left">의약품</span>단어카드다<i class="icon-remove pull-right"></i></a></li>
+                        <li><a class="btn" href="#"><span class="label label-info pull-left">진단명</span> 단어카드2<i class="icon-remove pull-right"></i></a></li>
+                        <li><a class="btn" href="#"><span class="label label-important pull-left">의약품</span>단어카드다<i class="icon-remove pull-right"></i></a></li>
+                        <li><a class="btn" href="#"><span class="label label-important pull-left">의약품</span>단어카드다<i class="icon-remove pull-right"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+                  
+              </div>
+              <div class="tab-pane fade" id="comment">
+                <!-- 텍스트 수정할 때 엔터로 줄바꿈은 되게 해야겠다. textarea 태그만으로 가능할지 모르겠음 -->
+                <textarea class="span9 well" rows="20">의사 코멘트를 미리 입력해두고 템플릿도 만들어둔뒤 선택하면 텍스트가 바뀌도록 한다. 그러나 그전 까지는 한 가지 타입의 템플릿만 사용한다.<p>안녕하세요. 이제훈님.<br /><br />오늘 진료에 대한 도움말을 준비했습니다.<br /><br />병명이나 상태, 처방에 해당하는 단어를 누르시면 좀 더 자세한 정보를 보실 수 있습니다.<br /><br />다음 예약일에 뵙겠습니다.</p>
+                </textarea>
+                <div class="span3">
+                  
+                </div>
+              </div>
+            </div>
+            
+  
+          </div>
+   
+          <!-- 우측에 SMS 발송메뉴 들어갈 곳 -->
+          <!-- class 새로 만들어야 함 --> 
+          <div class="span3">             
+            <!-- textarea 내 글자수 세는 함수 필요 -->
+            <p>남은문자 24/1000  글자수 74/80 Bytes</p>
+            <!-- window.onload 또는 jquery 이용해서 $(document).ready 되면 바로 short link를 생성해내려고 했으나 중간 클릭(단어목록 저장버튼)으로 생성하는게 나을듯. 구상 중--> 
+            <textarea class="well" rows="5">조은병원(전문의: 김창수) 오늘 진료에 대한 당부말씀과 도움말입니다. http://dr.with/uj75m 예약일은 9/3 10:30입니다.</textarea>
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-ok"></i></span>
+              <input class="input-medium" id="appendedPrependedInput" type="text" placeholder="보내는 번호">
+            </div>        
+            <div class="input-prepend input-append">
+              <span class="add-on"><i class="icon-ok"></i></span>
+              <input class="input-medium" id="appendedPrependedInput" type="text" placeholder="받는 번호">
+              <!-- id 부여한 뒤, button onclick 하면 buttion 객체 바로 밑에 추가 --> 
+              <a class="btn" href="#"><i class="icon-plus"></i></a>
+            </div>        
+            
+            <!-- 담당의사명은 자동으로 등록, 병원명도 값이 있을 때 자동등록 -->
+            <br />
+            <p><a class="btn" href="#" rel="tooltip" title=" 예) 예약일은 9/3 10:30입니다."><i class="icon-calendar"></i> 진료 예약일</a></p>
+            <br />
+            <!-- 문자 보내기 클리 시, 1. 문자 전송, 2. 단어카드 객체 가져와서 db에 저장, 3. 의사 코멘트 캑체 value 가져와서 db에 저장, 2,3번을 일종의 구매로 취급해서 거래내용을 저장하자--> 
+            <p><a class="btn btn-large btn-primary" href="#"><i class="icon-envelope icon-white"></i> 문자 보내기</a></p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      
+    </footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  
+</html>

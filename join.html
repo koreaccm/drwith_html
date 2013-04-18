@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.With Mobile Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  </head>
+
+<body>
+	<header>
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+          <a class="brand" href="#">Dr.With</a>
+          <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#">SMS 보내기</a></li>
+            <li><a href="#">주소록관리</a></li>
+            <li><a href="#">의사/병원 정보수정</a></li>
+            <li><a href="#">문자충전</a></li>
+            <li><a href="#">전송내역</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+   
+    <section>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span3"></div>
+          <div class="span6">
+			<form class="form-horizontal">
+			  <div class="control-group">
+			    <label class="control-label" for="inputName">Doctor Name</label>
+			    <div class="controls">
+			      <input type="text" id="inputName" placeholder="홍길동" />
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="inputDept">진료과</label>
+			    <div class="controls">
+			      <input type="text" id="inputDept" placeholder="진료과" />
+			    </div>
+			  </div>
+		  	  <div class="control-group">
+			    <label class="control-label" for="inputImg">Profile Image</label>
+			    <div class="controls">
+			      <input type="text" id="inputImg" placeholder="Need to change to pics" />
+			      <img src="..." class="img-polaroid">
+			    </div>
+			  </div>
+		
+			  
+			  <legend>병원 정보</legend>
+		
+			  <div class="control-group">
+			  	<label class="control-label" for="inputTel">전화번호</label>
+			    <div class="controls">
+					<select class="span2">
+						<option>02</option>
+						<option>031</option>
+						<option>051</option>
+						<option>055</option>
+					</select>
+					<div class="input-append">
+						<input class="input-medium input-append" type="tel" maxlength="8" id="inputTel" />
+						<button class="btn" type="button">Search</button>
+					</div>
+				</div>
+			  </div>  
+			  
+			  <div class="control-group">
+			    <label class="control-label" for="inputHos">병원명</label>
+			    <div class="controls">
+			      <input type="text" id="inputHos" placeholder="병원명" />
+			    </div>
+			  </div>
+			  
+		  	  <div class="control-group">
+			    <label class="control-label" for="inputTime">진료시간 평일</label>
+			    <div class="controls">
+			      <input type="time" value="09:00" class="input-small" />
+			      <input type="time" value="18:00" class="input-small" />
+			    </div>
+			  </div>	  
+			  
+			  <div class="control-group">
+			    <label class="control-label" for="inputAddr">주 소</label>
+			    <div class="controls">
+				  <div class="input-prepend">
+					<button class="btn" type="button">검색</button>
+					<input id="inputAddr" type="text" />
+					<input type="text" />			  
+	  			  </div>
+			    </div>
+			  </div>
+			  
+			  
+			  
+			  <div class="control-group">
+			    <div class="controls">
+			      <button type="submit" class="btn btn-primary pull-right">Sign up</button>
+			    </div>
+			  </div>
+			</form>
+		  </div>
+
+		  <div class="span3"></div>
+
+	    </div>
+	  </div>
+	</section>
+		
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
